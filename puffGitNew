@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# -------------------------------------------------
+# MUST HAVE SSH SETUP FOR GIT
+# MUST HAVE CREATED REPO WITH NO README ON GITHUB
+# REPO MUST HAVE THE SAME NAME AS CURRENT DIRECTORY
+# ------------------------------------------------- 
+
+# -------------------------------------------------
+# CREATES REPO WITH README THAT NEEDS EDITING
+# CREATES TWO BRANCHES, MASTER AND DEVELOP
+# ------------------------------------------------- 
+
+# Change this variable to your github username
+gitUser="ZackSnoen"
+
+# Setup ssh url for later command
+sshURL=git@github.com:$gitUser/$(basename $PWD).git
+
+new_repo () {
+	git init
+	git checkout -b master
+	git checkout -b develop
+	echo "# ADD DESCRIPTION" >> README.md
+	git add .
+	git commit -m "Added README to new repo."
+	git checkout -b master
+	git merge --no-ff develop
+	git remote add origin $sshURL
+	git push -u origin master
+	git checkout develop
+	git push origin develop
+}
+
+# Run function
+new_repo
