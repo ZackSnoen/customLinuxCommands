@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "     command     |     use     "
+echo "puffGitNew       | handles all commands to create new repo from"
+echo "                 | current empty directory, must have repo on"
+echo "                 | github.com created with nothing in it"
+echo "                 |"
+echo "puffGitFlow      | Lays out good workflow while using git"
