@@ -5,6 +5,4 @@ The purpose of this repo is to store all bash scripts I make for QOL in Linux
 # Then running puffcpbin automates doing that for all other shell scripts
 sudo chmod +x puffcpbin
 
-sudo cp puffcpbin /usr/local/bin/
-
-puffcpbin
+./puffcpbin
