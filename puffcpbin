@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Files holds the name of each file in CWD minus the README.md
+files=($(ls -I "*.md"))
+
+# Loops through array
+# buildings and copying each file to /usr/local/bin/ exluding README.md
+for i in "${files[@]}"
+do
+	sudo chmod +x $i
+	sudo cp $i /usr/local/bin/
+done

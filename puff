@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Displays all my main commands and their use to terminal
+echo "     command     |     use     "
+echo "puffGit          | 'help' for custom git commands"
+echo "                 |"
+echo "puffcpbin        | Automates building and copying script files to /usr/local/bin/"
